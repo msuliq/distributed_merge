@@ -27,7 +27,7 @@ jobs:
           ruby-version: ${{ matrix.ruby }}
           bundler-cache: true
       - name: Bundle audit
-        run: bundle exec bundle-audit --update
+      - run: bundle exec bundle-audit --update
       - name: Install dependencies
       - run: bundle install
       - name: Run tests
