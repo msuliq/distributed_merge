@@ -5,7 +5,7 @@ require_relative "lib/distributed_merge/version"
 Gem::Specification.new do |spec|
   spec.name = "distributed_merge"
   spec.version = DistributedMerge::VERSION
-  spec.authors = ["Suleyman Musayev"]
+  spec.authors = ["msuliq"]
   spec.email = ["slmusayev@gmail.com"]
 
   spec.summary = "Gem that adds the method to merge arrays of unequal size with
@@ -22,7 +22,7 @@ Gem::Specification.new do |spec|
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "https://github.com/msuliq/distributed_merge"
-  spec.metadata["changelog_uri"] = "https://github.com/msuliq/distributed_merge/changelog.md"
+  spec.metadata["changelog_uri"] = "https://github.com/msuliq/distributed_merge/blob/main/CHANGELOG.md"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
