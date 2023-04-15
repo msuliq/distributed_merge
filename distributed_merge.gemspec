@@ -15,7 +15,7 @@ Gem::Specification.new do |spec|
    length and returns a one-dimensional merged array with the elements equally interleaved
    and distributed."
   spec.license = "MIT"
-  spec.required_ruby_version = ">= 2.6.0"
+  spec.required_ruby_version = ">= 2.7.0"
   spec.homepage = "https://github.com/msuliq/distributed_merge"
 
   spec.metadata["allowed_push_host"] = "https://rubygems.org"
