@@ -2,6 +2,16 @@
 
 require_relative "distributed_merge/version"
 
+### Distributed Merge
+## Over View
+# when included this gem adds 'distributed_merge' method to Array class that can
+# be called on two-dimensional arrays containing arrays of varying size to
+# return a single layer merged array with all elements evenly interleaved and
+# distributed
+## Usage
+# [[1, 2, 3, 4], ['a', 'b'], ['C']].distributed_merge
+#   returns: [1, "b", 2, "C", 3, "a", 4]
+
 module DistributedMerge
   module DistributedMergeArray # :nodoc:
     # Accepts a two-dimensional array with subarrays of varying size and returns

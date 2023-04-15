@@ -111,4 +111,9 @@ class TestDistributedMerge < Minitest::Test
     expected_result = [1, "F", 2, "D", "d", 3, 4, "b", "B", 5, 6, "A", 7, "a", "C", "c", 8, "E", 9, "G", 10]
     assert_equal expected_result, two_d.distributed_merge
   end
+
+  def test_should_return_correct_result_for_sample_in_documentation
+    doc_sample = [[1, 2, 3, 4], %w[a b], ["C"]].distributed_merge
+    assert_equal [1, "b", 2, "C", 3, "a", 4], doc_sample
+  end
 end
