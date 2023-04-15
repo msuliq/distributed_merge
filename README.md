@@ -1,6 +1,6 @@
 # DistributedMerge
 
-[![Gem Version](https://badge.fury.io/rb/distributed_merge.svg)] [![Coverage](https://img.shields.io/badge/coverage-100%25-success.svg)](https://github.com/grosser/single_cov)
+[![Coverage](https://img.shields.io/badge/coverage-100%25-success.svg)](https://github.com/grosser/single_cov)
 
 'distributed_merge' is a Ruby gem that adds a method to Array class that allows
 merge interleaving arrays of non-equal length with elements being equally
