@@ -40,6 +40,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-19
+  x86_64-linux
 
 DEPENDENCIES
   bundle-audit (~> 0.1.0)
