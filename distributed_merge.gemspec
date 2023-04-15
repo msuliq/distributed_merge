@@ -8,12 +8,12 @@ Gem::Specification.new do |spec|
   spec.authors = ["Suleyman Musayev"]
   spec.email = ["slmusayev@gmail.com"]
 
-  spec.summary = "Gem that adds the method to merge arrays of unequal size with equalized
-  distribution of elements."
+  spec.summary = "Gem that adds the method to merge arrays of unequal size with
+   distribution of elements."
   spec.description = "This gem extends Array class with the distributed_merge method that
    accepts a two-dimensional array containing an arbitrary number of arrays of varying
-   length and returns a one-dimensional merged array with the equally distributed
-   elements."
+   length and returns a one-dimensional merged array with the elements equally interleaved
+   and distributed."
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.6.0"
   spec.homepage = "https://github.com/msuliq/distributed_merge"
