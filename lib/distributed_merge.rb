@@ -6,9 +6,8 @@ module DistributedMerge
   module DistributedMergeArray # :nodoc:
     # Accepts a two-dimensional array with subarrays of varying size and returns
     # merged array with the elements distributed across.
-
     def distributed_merge
-      return self unless all_arrays? && two_dimensional?
+      return self unless two_dimensional?
 
       data = sort_arrays_by_size
       largest = data.first
@@ -32,12 +31,14 @@ module DistributedMerge
       largest
     end
 
-    def all_arrays?
-      all? { |arg| arg.instance_of?(Array) }
+    def two_dimensional?
+      return false unless all_arrays?
+
+      flatten(1).none? { |arg| arg.instance_of?(Array) } && flatten(1).count > 1
     end
 
-    def two_dimensional?
-      flatten(1).none? { |arg| arg.instance_of?(Array) } && flatten(1).count > 1
+    def all_arrays?
+      all? { |arg| arg.instance_of?(Array) }
     end
 
     def sort_arrays_by_size
