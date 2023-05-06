@@ -15,12 +15,12 @@ class TestDistributedMerge < Minitest::Test
     assert_raises(NoMethodError) { hash.distributed_merge }
   end
 
-  def test_returns_original_array_if_not_two_dimensional
+  def test_raises_argument_error_if_not_two_dimensional
     one_d = [1, 2, 3, 4, 5]
-    assert_equal one_d, one_d.distributed_merge
+    assert_raises(ArgumentError) { one_d.distributed_merge }
 
     three_d = [[[1, 2, 3], [4, 5]], [6, 7, 8, 9, 10]]
-    assert_equal three_d, three_d.distributed_merge
+    assert_raises(ArgumentError) { three_d.distributed_merge }
   end
 
   def test_case_10_vs_1_array
