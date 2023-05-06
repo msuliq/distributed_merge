@@ -17,7 +17,7 @@ module DistributedMerge
     # Accepts a two-dimensional array with subarrays of varying size and returns
     # merged array with the elements distributed across.
     def distributed_merge
-      return self unless two_dimensional?
+      raise ArgumentError, "Input must be an array of arrays" unless two_dimensional?
 
       data = sort_arrays_by_size
       largest = data.first
@@ -44,7 +44,9 @@ module DistributedMerge
     def two_dimensional?
       return false unless all_arrays?
 
-      flatten(1).none? { |arg| arg.instance_of?(Array) } && flatten(1).count > 1
+      flattened_array = flatten(1)
+
+      flattened_array.none? { |arg| arg.instance_of?(Array) } && flattened_array.count > 1
     end
 
     def all_arrays?
