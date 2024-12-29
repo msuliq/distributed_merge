@@ -1,35 +1,41 @@
 # DistributedMerge
 
-[![Coverage](https://img.shields.io/badge/coverage-100%25-success.svg)](https://github.com/grosser/single_cov)
-
-'distributed_merge' is a Ruby gem that adds a method to Array class that allows
-merge interleaving arrays of non-equal length with elements being equally
-distributed. The method can be called on a two-dimensional array containing two
-or more sub-arrays of various size.
+`distributed_merge` is a Ruby gem that extends the `Array` class with a method for merging 
+and interleaving arrays of varying lengths, ensuring that elements are distributed as 
+evenly as possible. This method can be applied to any two-dimensional array containing two 
+or more sub-arrays of different sizes.
 
 ## Installation
 
-To install the gem run the following command in the terminal:
+Add the gem to your project by running:
+```bash
+  bundle add distributed_merge
+```
 
-    $ bundle add distributed_merge
-
-If bundler is not being used to manage dependencies, install the gem by executing:
-
-    $ gem install distributed_merge
+If you are not using Bundler to manage dependencies, install the gem directly with:
+```bash
+  gem install distributed_merge
+```
 
 ## Usage
 
-To add the distributed_merge method to your project include it in your project like so:
+To use the `distributed_merge` method, include the gem in your project:
 ```ruby
 require 'distributed_merge'
 ```
 
-When included the method can be called on any two-dimensional array containing sub-arrays of various size (non-equal length) and it will return a single layer merged array with all the elements of the sub-arrays evenly interleaved and distributed.
+Once included, you can call the `distributed_merge` method on any two-dimensional array 
+containing sub-arrays of varying lengths. The method will return a single merged array 
+with all elements interleaved and evenly distributed.
 
 ```ruby
 [[1, 2, 3, 4], ['a', 'b'], ['C']].distributed_merge
 # => [1, "b", 2, "C", 3, "a", 4]
 ```
+
+In this example:
+* The method merges the sub-arrays `[1, 2, 3, 4]`, `['a', 'b']`, and `['C']`.
+* It ensures the elements are interleaved and distributed as evenly as possible in the final array.
 
 ## Contributing
 

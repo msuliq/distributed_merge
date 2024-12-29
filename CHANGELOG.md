@@ -1,5 +1,7 @@
 ## [Released]
 
+## [0.1.5] - 2024-12-29
+- Update readme
 ## [0.1.4] - 2023-05-06
 - Improvements related to .flatten method, fixing typos
 ## [0.1.3] - 2023-04-15
@@ -11,5 +13,3 @@
 - Updates to CI workflow
 ## [0.1.0] - 2023-04-15
 - Initial release
-
-
